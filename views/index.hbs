@@ -1,0 +1,21 @@
+<center>
+<h1>{{title}}</h1>
+
+</center>
+
+
+<h3><a class="btn btn-secondary" href="/articles/add"><i class="fa fa-plus"></i>Create New</a></h3>
+<table class="table table-striped">
+
+    <tbody>
+        {{#each Article}} 
+        <tr>
+            <td>{{this.title}}</td>
+            <td>
+                <a href="/articles/edit/{{this._id}}"><i class="fa fa-pencil fa-lg" style="float:right;padding: 6px" aria-hidden="true"></i></a>
+                <a href="/articles/delete/{{this._id}}"><i class="fa fa-trash fa-lg" style="float:right;padding: 7px 14px;" aria-hidden="true"></i></a>
+            </td>
+        </tr>     
+        {{/each}}
+    </tbody>
+</table>

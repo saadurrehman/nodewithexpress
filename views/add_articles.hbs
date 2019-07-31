@@ -1,0 +1,48 @@
+<center>
+<h1>{{title}}</h1>
+</center>
+<form method="POST" action="/articles/add">
+<input type="hidden" name="_id" value="{{Articles._id}}">
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>
+                Title
+            </label>
+            <input type="text" class="form-control"name="title" value="{{Articles.title}}">
+        <div class="alert alert-danger">
+            {{Article.titleError}}
+        </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>
+                Author
+            </label>
+            <input type="text" class="form-control"name="author"value="{{Articles.author}}">
+        <div class="alert alert-danger">
+            {{Article.authorError}}
+        </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>
+                Body
+            </label>
+            <textarea type="text" class="form-control"name="body">{{Articles.body}}</textarea>
+        <div class="alert alert-danger">
+            {{Article.bodyError}}
+        </div>
+        </div>
+        <input type="submit" class="btn btn-primary"name="submit" value="Submit">
+    </div>
+    
+
+</div>
+</form>
